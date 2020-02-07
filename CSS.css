@@ -1,7 +1,8 @@
 /*code css crée par Antoine Bon */
 
 body {
-    background-image: url(https://images.unsplash.com/photo-1568738558403-f4e8c8f7a842?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=375&q=80);
+   /* background-image: url(https://images.unsplash.com/photo-1568738558403-f4e8c8f7a842?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=375&q=80); */
+    backgroundcolor: black;
     background-size: cover;
     background-position: center center;
     text-align: center;
