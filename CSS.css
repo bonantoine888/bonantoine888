@@ -1,0 +1,234 @@
+/*code css crée par Antoine Bon */
+
+body {
+    background-image: url(./img/back.jpg);
+    background-size: cover;
+    background-position: center center;
+    text-align: center;
+
+}
+
+
+a,
+a:visited {
+    /* Les liens déjà visités antérieurement */
+    color: #ffffff;
+    /* couleur blanche */
+}
+
+a:hover,
+a:focus,
+a:active {
+    /* Les liens ou on place la souris */
+    color: #ff0000;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'BioRhyme', serif;
+}
+
+/* barre navigation prend 100% de la taille de la page*/
+nav {
+    width: 100%;
+    /* 100% de la page */
+    margin: 0 auto;
+    background-color: rgb(182, 52, 52);
+    position: sticky;
+    top: 0px;
+    /*position en haut de la page*/
+}
+
+/* pas de style*/
+nav ul {
+    list-style-type: none;
+}
+
+/* partir a gauche text aligner au centre*/
+nav ul li {
+    float: left;
+    width: 25%;
+    text-align: center;
+    position: relative;
+}
+
+/* ul hover souris, pointer */
+nav ul::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*nav a dans li */
+nav a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    border-bottom: 2px solid transparent;
+    padding: 10px 0px;
+}
+
+/*bouton contour en jaune hover souris pointer dessus */
+nav a:hover {
+    color: rgb(68, 32, 32);
+    border-bottom: 2px solid gold;
+}
+
+/* class sous represente les boutons sous */
+.sous {
+    display: none;
+    box-shadow: 0px 1px 2px #CCC;
+    background-color: rgba(36, 62, 179, 0.795);
+    /*couleur du font des boutons */
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+}
+
+/*display block*/
+nav>ul li:hover .sous {
+    display: block;
+}
+
+/*class sous li*/
+.sous li {
+    float: none;
+    width: 100%;
+    text-align: left;
+}
+
+/*class sous li a */
+.sous a {
+    padding: 10px;
+    border-bottom: none;
+}
+
+/*class sous a souris pointer */
+.sous a:hover {
+    border-bottom: none;
+    background-color: RGBa(200, 200, 200, 0.1);
+}
+
+/* class deroulant souris pointer a plus content &ensp*/
+.deroulant>a::after {
+    content: " ▼ ";
+    font-size: 12px;
+}
+
+/* class conteneur taille  */
+.conteneur {
+    margin: 50px 20px;
+    height: 1500px;
+}
+
+/* paragraphe */
+p {
+    color: white;
+    font-weight: bold;
+    font-family: 'Space Mono', monospace;
+}
+
+/* titre h1 50px ,font 80px couleur red */
+h1 {
+    margin: 50px;
+    font-size: 80px;
+    color: red;
+    font-family: 'BioRhyme', serif;
+    text-align: center;
+    text-shadow: 1px 1px 4px #444;
+}
+
+/* titre h3 plus petit titre en vert */
+h3 {
+    color: rgb(73, 226, 43);
+    font-family: 'BioRhyme', serif;
+    text-align: center;
+}
+
+/*titre h2 comme h3 */
+h2 {
+    color: rgb(73, 226, 43);
+    font-family: 'BioRhyme', serif;
+    text-align: center;
+}
+
+/* li aligner au centre */
+li {
+    text-align: center;
+}
+
+/* class d1 diaporama avec fondu et taille  */
+.d1 {
+    width: 50%;
+    /*pourcentage ecran*/
+    height: 432px;
+    margin: 50px auto;
+    box-shadow: 0 15px 10px -5px #777;
+    background-color: #EDEDED;
+    background-size: cover;
+    animation: fondu 15s ease-in-out infinite both;
+}
+
+/*class conteneur taille */
+.conteneur {
+    margin: 50px auto;
+}
+
+/*class d1 ":hover"quand la souri est dessus l'animation se fige*/
+.d1:hover {
+    animation-play-state: paused;
+}
+
+/*clef de pourcentage du kayfram en fondu en % pour le diaporama */
+@keyframes fondu {
+    0% {
+        background-image: url("https://upload.wikimedia.org/wikipedia/commons/8/88/Concierto_de_Jean_Michel_Jarre_%284847663399%29.jpg");
+    }
+
+    33.33% {
+        background-image: url("https://live.staticflickr.com/4106/5029417270_c6b433060f_b.jpg");
+    }
+
+    66.67% {
+        background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/%C3%89tienne_de_Cr%C3%A9cy_%40_Scopitone_2008.jpg/743px-%C3%89tienne_de_Cr%C3%A9cy_%40_Scopitone_2008.jpg");
+    }
+
+    100% {
+        background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Astrofloor.jpg/800px-Astrofloor.jpg");
+    }
+}
+
+
+/*bordure et typo du tableau*/
+table {
+    border-collapse: collapse;
+    /*bordure du tableau*/
+    margin: 50px auto;
+}
+/*interieur du tableau*/
+th,
+td {
+    border: 5px solid white;
+    padding: 10px;
+    font-family: 'BioRhyme', serif;
+    /*typo couleur taille*/
+    color: white;
+}
+
+/*commantaire image*/
+.figcaption {
+    font-size: 20px;
+    color: rgb(73, 226, 43);
+    font-family: 'BioRhyme', serif;
+    text-align: center;
+
+}
+/*pied de page*/
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+   
+  
+}
